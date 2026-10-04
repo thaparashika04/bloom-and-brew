@@ -67,8 +67,11 @@ function Home() {
       <section className="hero">
         <div className="hero-copy">
           <p className="eyebrow">COFFEE • COMMUNITY • COMFORT</p>
-          <h1>Your cozy corner for <em>coffee & connection.</em></h1>
-          <p className="lead">Freshly brewed coffee, homemade treats and a warm space to study, work, meet or simply slow down.</p>
+          <h1>Your Cozy Kathmandu Café for Coffee & Connection</h1>
+          <p className="lead">
+            Enjoy freshly brewed coffee, homemade bakery treats and a cozy space
+            in Kathmandu to study, work, meet friends or simply slow down.
+          </p>
           <div className="actions">
             <Link className="btn primary" to="/menu">Explore Our Menu</Link>
             <Link className="btn secondary" to="/contact">Visit / Contact</Link>
@@ -118,8 +121,11 @@ function Menu() {
   return (
     <section className="page section">
       <p className="eyebrow">OUR MENU</p>
-      <h1>Simple food, good coffee.</h1>
-      <p className="lead">Explore a sample menu created for the academic project.</p>
+      <h1>Fresh Coffee, Bakery & Food Menu in Kathmandu</h1>
+      <p className="lead">
+        Explore our selection of freshly brewed coffee, homemade bakery treats
+        and comforting café food.
+     </p>
       <div className="filters">{categories.map(c => <button key={c} className={filter === c ? 'selected' : ''} onClick={() => setFilter(c)}>{c}</button>)}</div>
       <div className="menu-grid">
         {filtered.map(item => <article className="menu-item" key={item.name}><div><span>{item.category}</span><h3>{item.name}</h3><p>{item.desc}</p></div><strong>{item.price}</strong></article>)}
@@ -132,8 +138,11 @@ function Blog() {
   return (
     <section className="page section">
       <p className="eyebrow">BLOG & CONTENT</p>
-      <h1>Ideas worth sharing.</h1>
-      <p className="lead">Sample SEO-focused content for the Bloom & Brew digital marketing strategy.</p>
+      <h1>Café, Coffee & Lifestyle Tips</h1>
+      <p className="lead">
+       Discover coffee tips, café lifestyle ideas and helpful content from
+       Bloom & Brew Café.
+      </p>
       <div className="blog-grid">
         {posts.map(post => <article className="post" key={post.title}><div className="post-image">☕</div><div className="post-body"><small>{post.date}</small><h2>{post.title}</h2><p>{post.text}</p><span className="text-link">Read article →</span></div></article>)}
       </div>
@@ -153,7 +162,10 @@ function Contact() {
         <div>
           <p className="eyebrow">GET IN TOUCH</p>
           <h1>Let's brew something good.</h1>
-          <p className="lead">Have a question, collaboration idea or feedback? Send us a message.</p>
+          <p className="lead">
+            Contact Bloom & Brew Café in Kathmandu for questions, collaborations,
+            feedback or café-related inquiries.
+          </p>
           <div className="contact-info"><p><b>📍 Location</b><br />Kathmandu, Nepal</p><p><b>✉️ Email</b><br />hello@bloomandbrew.example</p><p><b>🕒 Hours</b><br />Sun–Fri, 8:00 AM–8:00 PM</p></div>
         </div>
         <form onSubmit={submit} className="contact-form">
